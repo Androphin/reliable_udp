@@ -23,7 +23,7 @@
 -define(WORKERS, 1).
 -define(TIMEOUT, 5000).
 
--spec start_listener( Port :: pos_integer(), Opts :: proplists:proplist() ) -> { ok, Lestener :: rudp_listener:listener() }.
+-spec start_listener( Port :: pos_integer(), Opts :: proplists:proplist() ) -> { ok, Listener :: rudp_listener:listener() }.
 start_listener(Port, Opts) ->
   { ok, Pid } = rudp_listener:start_link(?WORKERS, Port, Opts),
   { ok, Listener } = rudp_listener_registrar:lookup(Pid),
