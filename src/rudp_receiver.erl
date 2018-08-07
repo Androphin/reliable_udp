@@ -40,7 +40,7 @@
   last_packet_number = 0 :: pos_integer(),
   current_batch_number = 0 :: pos_integer(),
   storage = [] :: proplists:proplists(BatchNumber :: pos_integer(), rudp_storage:storage()),
-  missed_packets = gb_trees:empty() :: gb_trees:tree(PacketNUmber :: pos_integer(), #missed{}),
+  missed_packets = gb_trees:empty() :: gb_trees:tree(PacketNumber :: pos_integer(), #missed{}),
   is_active = true :: boolean()
 }).
 
